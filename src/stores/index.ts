@@ -7,24 +7,21 @@ import {
   DocumentData,
   query,
   where,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/firestore";
 import { db } from "../firebase/index";
-
 
 export const authStore = defineStore("auth", {
   state: () => ({
     registerCheck: false,
-    user: null,
+    user: null as DocumentData | null,
   }),
   actions: {
-    //@ts-ignore
-    setUser(user) {
+    setUser(user: DocumentData) {
       this.user = user;
     },
 
-
-
-    //@ts-ignore
     async setRegister(userData) {
       if (
         userData.password != null &&
@@ -36,22 +33,28 @@ export const authStore = defineStore("auth", {
         };
         delete data.password2;
 
-        const userId = Math.floor(Math.random() * 10000) + 1;
+        try {
+          const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            data.email,
+            data.password
+          );
+          const user = userCredential.user;
 
-        await setDoc(doc(db, "users", data.email), {
-          userId: userId,
-          ...data,
-        });
+          await setDoc(doc(db, "users", user.uid), {
+            userId: user.uid,
+            ...data,
+          });
 
-        this.registerCheck = true;
+          this.registerCheck = true;
+        } catch (error) {
+          console.error("Error creating user", error);
+        }
       }
     },
 
-    //@ts-ignore
     async setLogin(userData) {
-      let user = {
-        ...userData,
-      };
+      let user = { ...userData };
 
       const docRef = doc(db, "users", user.email);
       const docSnap = await getDoc(docRef);
@@ -71,19 +74,9 @@ export const authStore = defineStore("auth", {
   },
 
   getters: {
+    getRegisterCheck: (state) => state.registerCheck,
+    isAuth: (state) => state.user !== null,
+    getUser: (state) => state.user,
+  }
+}
 
-    getRegisterCheck(state){
-      return state.registerCheck
-    },
-
-    isAuth(state) {
-      return state.user !== null;
-    },
-
-    getUser(state) {
-      return state.user;
-    }
-   
-  },
-});
-  
