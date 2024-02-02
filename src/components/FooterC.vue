@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import SocialMediaC from './SocialMediaC.vue';
+import Language from './Language.vue';
+import CerezC from './CerezC.vue';
 
 const footerItems = ref({});
 
