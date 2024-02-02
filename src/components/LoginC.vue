@@ -78,52 +78,44 @@
  </template>
 
 
+<script>
 
 
-<script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue';
-import HeaderC from './HeaderC.vue';
 
+
+import { defineComponent } from 'vue';
+import { useRouter } from "vue-router";
+import PzForm from './PzForm.vue';  // PzForm bileşeni
 import { authStore } from "@/stores/index"
 
 
 
-
 export default defineComponent({
-    setup() {
-        const state = reactive({
-            userData: {
-                email: "",
-                password: ""
-            }
-        });
-        return { ...toRefs(state) };
-    },
+  setup() {
+    const state = reactive<{ userData: { email: string; password: string } }>({
+      userData: {
+        email: "",
+        password: "",
+      },
+    });
 
-    methods: {
-        //@ts-ignore
-        async login(userData) {
+    const authStore = inject("authStore");
+    const router = useRouter();
 
-            this.setLogin(userData).then(() => {
+    const login = async (userData: { email: string; password: string }) => {
+      await authStore.setLogin(userData);
 
-if (this.getUser !== null) {
-    //@ts-ignore
-    this.$router.push({ path: '/' })
-}
+      if (authStore.getUser !== null) {
+        router.push({ path: "/" });
+      }
+    };
 
-})
+    return { ...toRefs(state), login };
+  },
 
+  components: {
+    PzForm
+  },
+});
 
-},
-
-...mapActions(authStore, ["setLogin"])
-},
-
-
-computed:{
-...mapState(authStore,["getUser"])
-},
-
-components: { HeaderC }
-})
 </script>
