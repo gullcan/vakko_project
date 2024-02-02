@@ -76,3 +76,54 @@
                                              </div>
                                          </form>
  </template>
+
+
+
+
+<script lang="ts">
+import { defineComponent, reactive, toRefs } from 'vue';
+import HeaderC from './HeaderC.vue';
+
+import { authStore } from "@/stores/index"
+
+
+
+
+export default defineComponent({
+    setup() {
+        const state = reactive({
+            userData: {
+                email: "",
+                password: ""
+            }
+        });
+        return { ...toRefs(state) };
+    },
+
+    methods: {
+        //@ts-ignore
+        async login(userData) {
+
+            this.setLogin(userData).then(() => {
+
+if (this.getUser !== null) {
+    //@ts-ignore
+    this.$router.push({ path: '/' })
+}
+
+})
+
+
+},
+
+...mapActions(authStore, ["setLogin"])
+},
+
+
+computed:{
+...mapState(authStore,["getUser"])
+},
+
+components: { HeaderC }
+})
+</script>
