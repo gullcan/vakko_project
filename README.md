@@ -45,3 +45,4 @@ npm run build
 npm run lint
 ```
 # vakko_project
+# vakkovue
