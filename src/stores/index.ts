@@ -82,16 +82,8 @@ export const authStore = defineStore("auth", {
 
     getUser(state) {
       return state.user;
-    },
-  
+    }
    
-    getRewardList(state) {
-      return state.rewardList;
-    },
-
-    getBasketList(state) {
-      return state.basketList;
-    },
   },
 });
   
