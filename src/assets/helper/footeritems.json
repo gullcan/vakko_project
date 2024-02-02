@@ -1,0 +1,176 @@
+{
+  "footer": {
+    "items": [
+      {
+        "label": "GÜVENLİ ALIŞVERİŞ",
+        "subLabel": "",
+        "icon": ["fas", "shield-halved"]
+      },
+      {
+        "label": "ÜCRETSİZ KARGO",
+        "subLabel": "1000 TL ve üzeri siparişinde ücretsiz kargo",
+        "icon": ["fas", "truck"]
+      },
+      {
+        "label": "KOLAY DEĞİŞİM VE İADE",
+        "subLabel": "",
+        "icon": ["fas", "rotate-right"]
+      }
+    ],
+    "kesfet": [
+      {
+        "href": "/vakko-hakkinda-kurucu",
+        "icon": ["far", "circle-question"],
+        "label": "Vakko Hakkında"
+      },
+      {
+        "href": "/address/stores/",
+        "icon": ["fas", "location-dot"],
+        "label": "Mağazalar"
+      },
+      {
+        "href": "/account/vakko-card/",
+        "icon": ["far", "credit-card"],
+        "label": "Vakko Card"
+      }
+    ],
+    "vakkoGroup": [
+      {
+        "href": "/v2kdesigners/",
+        "target": "",
+        "title": "V2K DESIGNERS",
+        "label": "V2K DESIGNERS",
+        "icon": []
+      },
+      {
+        "href": "https://www.vakkorama.com.tr/",
+        "target": "_blank",
+        "title": "VAKKORAMA",
+        "label": "VAKKORAMA",
+        "icon": ["fas", "arrow-up-right-from-square"]
+      },
+      {
+        "href": "https://www.vakkolatelier.com/",
+        "target": "_blank",
+        "title": "VAKKO L'ATELIER",
+        "label": "VAKKO L'ATELIER",
+        "icon": ["fas", "arrow-up-right-from-square"]
+      },
+      {
+        "href": "https://www.vakkohotel.com/",
+        "target": "_blank",
+        "title": "VAKKO HOTEL & RESIDENCE",
+        "label": "VAKKO HOTEL & RESIDENCE",
+        "icon": ["fas", "arrow-up-right-from-square"]
+      },
+      {
+        "href": "https://www.vakkoesmod.com/",
+        "target": "_blank",
+        "title": "VAKKO ESMOD",
+        "label": "VAKKO ESMOD",
+        "icon": ["fas", "arrow-up-right-from-square"]
+      },
+      {
+        "href": "https://www.vakkoschool.com/",
+        "target": "_blank",
+        "title": "VAKKO SCHOOL OF HOSPITALITY AND SERVICE",
+        "label": "VAKKO SCHOOL OF HOSPITALITY AND SERVICE",
+        "icon": ["fas", "arrow-up-right-from-square"]
+      },
+      {
+        "href": "https://www.powerapp.com.tr/",
+        "target": "_blank",
+        "title": "POWER GROUP",
+        "label": "POWER GROUP",
+        "icon": ["fas", "arrow-up-right-from-square"]
+      },
+      {
+        "href": "/vitali-hakko-kreatif-endustriler-kutuphanesi/",
+        "target": "_blank",
+        "title": "VİTALİ HAKKO KREATİF ENDÜSTRİLER KÜTÜPHANESİ",
+        "label": "VİTALİ HAKKO KREATİF ENDÜSTRİLER KÜTÜPHANESİ",
+        "icon": []
+      }
+    ],
+    "bilgi": [
+      {
+        "href": "/sikca-sorulan-sorular/",
+        "title": "SIKÇA SORULAN SORULAR",
+        "label": "Sıkça sorulan sorular"
+      },
+      {
+        "href": "/iletisim/",
+        "title": "İLETİŞİM",
+        "label": "İletişim"
+      },
+      {
+        "href": "/kurumsal-iletisim",
+        "title": "KURUMSAL İLETİŞİM",
+        "label": "Kurumsal İletişim"
+      },
+      {
+        "href": "/teslimat",
+        "title": "TESLİMAT",
+        "label": "Teslimat"
+      },
+      {
+        "href": "/iade-ve-degisim",
+        "title": "İADE VE DEĞİŞİM",
+        "label": "İade Ve Değişim"
+      },
+      {
+        "href": "/kurumsal-satis",
+        "title": "KURUMSAL SATIŞ",
+        "label": "Kurumsal satış"
+      }
+    ],
+    "musteriIliskileri": [
+      {
+        "href": "/cerez-politikasi",
+        "title": "ÇEREZ POLİTİKASI",
+        "label": "Çerez Politikası",
+        "icon": []
+      },
+      {
+        "href": "/aydinlatma-metni/",
+        "title": "MÜŞTERİ AYDINLATMA METNİ",
+        "label": "Müşteri Aydınlatma Metni",
+        "icon": []
+      },
+      {
+        "href": "/sinirli-sorumluluk",
+        "title": "SINIRLI SORUMLULUK",
+        "label": "Sınırlı sorumluluk",
+        "icon": []
+      },{
+        "href": "/fikri-sinai-mulkiyet",
+        "title": "FİKRİ SINAİ MÜLKİYET",
+        "label": "Fikri Sınai Mülkiyet",
+        "icon": []
+      },
+      {
+        "href": "/bilgi-guvenligi-politikasi/",
+        "title": "BİLGİ GÜVENLİĞİ",
+        "label": " Bilgi Güvenliği",
+        "icon": []
+      },
+      {
+        "href": "https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/11388",
+        "title": "BİLGİ TOPLUMU HİZMETLERİ",
+        "label": "Bilgi Toplumu Hizmetleri",
+        "icon": ["fas", "arrow-up-right-from-square"]
+      },{
+        "href": "/kalite-politikasi",
+        "title": "KALİTE POLİTİKASI",
+        "label": "Kalite Politikası",
+        "icon": []
+      },
+      {
+        "href": "/yatirimci-iliskileri",
+        "title": "YATIRIMCI İLİŞKİLERİ",
+        "label": "Yatırımcı İlişkileri",
+        "icon": []
+      }
+    ]
+  }
+}
