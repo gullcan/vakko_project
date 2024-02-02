@@ -1,7 +1,7 @@
 import "./assets/css/style.css";
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router";
+import router from "./router/index";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faBars,
@@ -28,6 +28,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 const app = createApp(App).component("font-awesome-icon", FontAwesomeIcon);
+const pinia = createPinia()
 
 library.add(
   faCircleQuestion,faInstagram,
@@ -50,3 +51,5 @@ library.add(
 app.use(router);
 
 app.mount("#app");
+
+app.use(pinia)
